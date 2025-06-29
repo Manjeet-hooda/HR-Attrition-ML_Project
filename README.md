@@ -1,14 +1,196 @@
-# HR-Attrition-Project
+HR Attrition Machine Learning Project
 
-HR Attrition Analysis and Prediction
+This repository hosts a Machine Learning project focused on predicting HR attrition using a comprehensive dataset. The project aims to identify key factors contributing to employee turnover and build a predictive model to help organizations proactively address attrition challenges.
 
-This project delves into employee attrition (turnover), aiming to understand the factors that influence why employees leave an organization. By analyzing HR data, we can:
+Table of Contents
 
-Identify key drivers of attrition: Uncover the most significant factors contributing to employee exits, such as compensation, work-life balance, career growth opportunities, or management style.
-Develop predictive models: Build machine learning or statistical models to predict which employees are at a higher risk of leaving. This foresight empowers proactive retention strategies.
-Visualize trends and patterns: Explore data through informative visualizations to gain insights into attrition trends across departments, demographics, or job roles.
-Project Goals
+Project Overview
+Dataset
+Methodology
+Key Findings
+Files in this Repository
+How to Run the Project
+Libraries Used
 
-Reduce turnover costs: Retaining valuable talent saves the company money and time associated with recruitment and onboarding.
-Improve employee engagement: By understanding factors that lead to disengagement, we can create a more engaging work environment.
-Optimize HR practices: Data-driven insights can inform HR initiatives that foster a positive employee experience and enhance retention.
+Project Overview
+
+This project tackles the critical business problem of HR attrition. By analyzing various employee-related features, a machine learning model is developed to predict whether an employee is likely to leave the company. This predictive capability can enable HR departments to implement targeted retention strategies, ultimately saving costs and improving employee satisfaction.
+
+Dataset
+
+The project utilizes two datasets:
+Train_Dataset.csv and Test_Dataset.csv1.
+
+The Train_Dataset.csv contains 7810 entries and 22 columns, including:
+EmployeeID 2
+
+
+Attrition 3
+
+
+Age 4
+
+
+TravelProfile 5
+
+
+Department 6
+
+
+HomeToWork 7
+
+
+EducationField 8
+
+
+Gender 9
+
+
+HourlnWeek 10
+
+
+Involvement 11
+
+
+WorkLifeBalance 12
+
+
+Designation 13
+
+
+JobSatisfaction 14
+
+
+ESOPs 15
+
+
+NumCompaniesWorked 16
+
+
+OverTime 17
+
+
+SalaryHikelastYear 18
+
+
+WorkExperience 19
+
+
+LastPromotion 20
+
+
+CurrentProfile 21
+
+
+MaritalStatus 22
+
+
+MonthlyIncome 23
+
+
+The
+Test_Dataset.csv has 2630 entries and 21 columns, with similar features to the training dataset but without the 'Attrition' column, as it is meant for prediction24.
+
+
+Methodology
+
+The project involves several key steps:
+Data Loading: Train_Dataset.csv and Test_Dataset.csv are loaded into pandas DataFrames25.
+
+
+Data Preprocessing:
+Duplicate rows are dropped from the training dataset26.
+
+
+EmployeeID column is dropped from both training and testing datasets as it is not relevant for model training27.
+
+
+Missing values in the
+Attrition column of the training set are filled with '1.0'28.
+
+
+A 'data' column is added to differentiate between training and testing sets before concatenation29.
+
+
+The training and testing datasets are concatenated for unified preprocessing30.
+
+
+Exploratory Data Analysis (EDA): (Based on typical ML project flow, though specific EDA steps weren't detailed in the provided snippets, it's a standard practice)
+Feature Engineering: (Likely performed, but specific details not available in snippets)
+Model Training: (Specific model not identified, but the project builds a machine learning model)
+Prediction: The trained model makes predictions on the test dataset.
+Output Generation: The final predictions are saved to a CSV file named Final_output_for_Attrition.csv31.
+
+
+
+Key Findings
+
+The training dataset initially contains 7810 entries, with 5180 non-null values for
+Attrition, indicating some missing values that were handled during preprocessing32.
+
+
+The
+Attrition column in the training data shows a distribution of 3735 instances of 0.0 (no attrition) and 1445 instances of 1.0 (attrition) before imputation of null values33.
+
+
+
+Files in this Repository
+
+HR Attrition - Capstone project.ipynb: The main Jupyter Notebook containing the Python code for data loading, preprocessing, model building, and prediction. 34
+
+
+HR attrtition - ML capstone project.pdf: A PDF version of the Jupyter Notebook, possibly for presentation or easy viewing. 35
+
+
+Train_Dataset.csv: The dataset used for training the attrition prediction model. (Assumed to be in the repository as it's read by the notebook)
+Test_Dataset.csv: The dataset used for making predictions. (Assumed to be in the repository as it's read by the notebook)
+Final_output_for_Attrition.csv: The output file generated by the notebook, containing the attrition predictions for the test dataset. 36
+
+
+
+How to Run the Project
+
+To run this project, follow these steps:
+Clone the repository:
+Bash
+git clone <repository-url>
+
+
+Navigate to the project directory:
+Bash
+cd <project-directory>
+
+
+Install the required libraries:
+The project uses standard data science libraries. You can install them using pip:
+Bash
+pip install numpy pandas matplotlib seaborn warnings
+
+
+Open the Jupyter Notebook:
+Bash
+jupyter notebook "HR Attrition - Capstone project.ipynb"
+
+
+Run all cells: Execute all cells in the notebook to perform data loading, preprocessing, model training, and generate the Final_output_for_Attrition.csv file.
+
+Libraries Used
+
+os 37
+
+
+numpy 38
+
+
+pandas 39
+
+
+matplotlib.pyplot 40
+
+
+seaborn 41
+
+
+warnings 42
+
+

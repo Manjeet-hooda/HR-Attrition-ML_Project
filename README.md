@@ -1,3 +1,4 @@
+
 HR Attrition Machine Learning Project
 
 This repository hosts a Machine Learning project focused on predicting HR attrition using a comprehensive dataset. The project aims to identify key factors contributing to employee turnover and build a predictive model to help organizations proactively address attrition challenges.
